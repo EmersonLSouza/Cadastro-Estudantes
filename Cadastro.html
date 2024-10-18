@@ -3,29 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="js/style.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <script src="JS/style.js"></script>
+    <link rel="stylesheet" href="CSS/style.css">
     <title>Cadastro de Estudantes</title>
     
 </head>
 <body>
 
-    <h1>SISTEMA DE CADASTRO ESTUDANTIL</h1>
+    <h1>CADASTRO DE ESTUDANTES</h1>
 
     <form>    
         <fieldset>
             <legend>Cadastro de Estudantes</legend>
-            <label for="matricula">Matrícula:</label>
-            <input type="text"  name="matricula" id="matricula"><br><br>
             <label for="nome">Nome:</label>
-            <input type="text"  name="nome" id="nome"><br><br>
+            <input name="nome" id="nome"><br><br>
+
+            <label for="matricula">Matrícula:</label>
+            <input type="text" style="width: 147px;" name="matricula" id="matricula"><br><br>
+
             <label for="nascimento">Data de Nascimento:</label>
-            <input type="date"  name="nascimento" id="nascimento"><br><br>
-            <label for="sexo">Sexo:</label>
-            <input type="checkbox"  name="sexo" id="sexo">
-            <label for="feminino">Feminino</label>
-            <input type="checkbox" name="feminino" id="feminino">
+            <input type="date" style="width: 70px;" name="nascimento" id="nascimento"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" style="width: 172px;" name="email" id="email"><br><br>
+
+            <label for="curso">Curso:</label>
+            <input type="text" style="width: 168px;" name="curso" id="curso"><br><br>
+
             <label for="masculino">Masculino</label>
+            <input type="radio"  name="sexo" id="sexo" value="masculino"><br>
+
+            <label for="feminino">Feminino</label>
+            <input type="radio" name="sexo" id="sexo" value="feminino"><br><br>
+            
+            <input type="button" onclick="AddEstudante()" value="Adicionar"><br><br>
+            <input type="button" onclick="ViewEstudante()" value="Exibir"><br><br>
+            <input type="button" onclick="ViewName()" value="Mostrar Todos"><br><br>
         </fieldset>
     </form>
 </body>
